@@ -1,0 +1,163 @@
+body{
+    padding: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+}
+.menu {
+    display: block;
+}
+.menu a{
+    display: inline-block;
+    margin-right: 5rem;
+    text-decoration: none;
+    color: grey;
+}
+.menu a i{
+    padding-right: 0.5rem;
+}
+
+.menu a i:hover{
+    color: rgba(238, 117, 101, 1);
+    transition: 0.3s;
+}
+.menu a:hover{
+    color: rgba(238, 117, 101, 1);
+    transition: 0.3s;
+}
+.rrss {
+    color: grey;
+    padding: 0;
+}
+.facebook{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+.twitter{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+.facebook:hover{
+    color: blue;
+    transition: 0.3s
+}
+.twitter:hover{
+    color: skyblue;
+    transition: 0.3s
+}
+.section1{
+    position: relative;
+    text-align: center;
+}
+.header-text{
+    display: inline-block;
+    width: 90%;
+    height: 8.5rem;
+    background: rgba(124, 124, 124, 0.1);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.header-text h2{
+    color: rgba(238, 117, 101, 0.8);
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.section1 img{
+    width: 100%;
+    height: 25rem;
+    object-fit: none;
+    margin: -4px;
+}
+.section2{
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+.posts{
+    background-color: grey;
+    width: 70%;
+    height: 400px;
+    margin-right: 0.5rem;
+}
+.sidebar{
+    background-color: grey;
+    width: 30%;
+    height: 400px;
+}
+footer{
+    background-color: rgb(211, 209, 209);
+    border-left: 1rem solid grey;
+    border-right: 1rem solid grey;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .section2{
+        width: 100%;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0.5rem;
+    }
+    .posts{
+        background-color: grey;
+        width: 100%;
+        height: 400px;
+        margin-bottom: 0.5rem;
+        margin-right: 0rem;
+    }
+    .sidebar{
+        background-color: grey;
+        width: 100%;
+        height: 400px;
+    }
+    .menu a{
+        margin-right: 0rem;
+    }
+    .rrss {
+        color: grey;
+        padding: 0;
+    }
+    .facebook{
+        margin-left: 1rem;
+    }
+    .twitter{
+        margin-left: 1rem;
+    }
+    .section img{
+        margin-right: 1rem;
+    }
+
+}
+@media (max-width: 320px){
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
