@@ -1,6 +1,55 @@
+
+/*Cambio el orden de las secciones 1 y 2 con GRID*/
 body{
     padding: 3rem;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "section2"
+    "footer"
+    "section1"
+    ;
+}
+/*Vuelvo al orden original con GRID*/
+@media (max-width: 700px) {
+    body{
+        padding: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "section1"
+        "section2"
+        "footer";
+    }
+    
+}
+/*De nuevo altero el orden con GRID*/
+@media (max-width: 320px){
+    body{
+        padding: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "section2"
+        "section1"
+        "footer";
+    }
+}
+
+header{
+    grid-area: header;
+}
+.section1{
+    grid-area: section1;
+}
+.section2{
+    grid-area: section2;
+}
+footer{
+    grid-area: footer;
 }
 .section{
     display: flex;
