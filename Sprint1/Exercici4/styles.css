@@ -14,6 +14,7 @@ body{
 }
 .menu {
     display: block;
+    animation: down  1s ease-in;
 }
 .menu a{
     display: inline-block;
@@ -33,9 +34,14 @@ body{
     color: rgba(238, 117, 101, 1);
     transition: 0.3s;
 }
+.logo{
+    animation: right 1s linear;
+}
+
 .rrss {
     color: grey;
     padding: 0;
+    animation: left  1s ease-in;
 }
 .facebook{
     margin-right: 1.5rem;
@@ -47,11 +53,11 @@ body{
 }
 .facebook:hover{
     color: blue;
-    transition: 0.3s
+    transition: 0.3s;
 }
 .twitter:hover{
     color: skyblue;
-    transition: 0.3s
+    transition: 0.3s;
 }
 .section1{
     position: relative;
@@ -79,6 +85,7 @@ body{
     font-weight: 100;
     margin-bottom: 4rem;
     font-family: 'Times New Roman', Times, serif;
+    animation: transparencyUp 2s ease-in;
 }
 .section1 img{
     width: 100%;
@@ -233,3 +240,48 @@ footer{
     }
 
 }
+
+@keyframes down{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes left{
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes right{
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes transparencyUp{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+
+
