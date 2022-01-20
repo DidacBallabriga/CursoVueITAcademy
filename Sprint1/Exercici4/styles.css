@@ -4,7 +4,7 @@ body{
 }
 .section{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .section img{
@@ -87,53 +87,104 @@ body{
     margin: -4px;
 }
 .section2{
-    width: 100%;
-    height: 420px;
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: stretch;
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 .posts{
-    background-color: grey;
-    width: 70%;
-    height: 400px;
-    margin-right: 0.5rem;
+   width: 75%;
+   background-color: rgb(211, 209, 209);
+   margin-right: 1%;
+   padding-top: 0.5rem;
+   display: flex;
+   flex-flow: row wrap;
+   align-content: center;
+   justify-content: space-evenly;
+}
+.posts div{
+    width: 46%;
+    border: 0.5rem solid #f5f1f1;
+ }
+ .newpost{
+     background-color: #f5f1f1;
+     margin-bottom: 0.5rem;
+ }
+ .newpost img{
+     width: 100%;
+     height: 12rem;
+     opacity: 1;
+     object-fit: cover;
+ }
+
+ .newpost p{
+     columns: 2;
+ }
+ .date{
+    color: rgb(216, 184, 5, 0.9);
+    margin-top: -1.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+ }
+
+ .newpost h3{
+     background-color: #f08080;
+     text-transform: uppercase;
+     font-size: 1.5rem;
+     font-weight: lighter;
+     color: white;
+     padding-top: 3%;
+     padding-left: 0.5rem;
+     margin-block-start: 0em;
+     margin-block-end: 0em;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+ }
+ .read-more{
+     color: grey;
+     cursor: pointer;
+ }
+ .read-more:hover{
+    color: #f08080;
+    cursor: pointer;
 }
 .sidebar{
-    background-color: grey;
-    width: 30%;
-    height: 400px;
+    width: 24%;
+    background-color: rgb(211, 209, 209);
+    text-align: center;
+}
+.sidebar h4{
+   padding-top: 1rem;
+}
+.sidebar p{
+   padding: 0rem 1rem 1rem;
+}
+.prefooter{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
+    text-align: center;
 }
 footer{
-    background-color: rgb(211, 209, 209);
-    border-left: 1rem solid grey;
-    border-right: 1rem solid grey;
+    background-color: #f5f1f1;
+    border-left: 0.5rem solid rgb(211, 209, 209);
+    border-right: 0.5rem solid rgb(211, 209, 209);
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 850px) {
+    .date{
+        font-size: 0.75rem;
+    }
+    .newpost p{
+        columns: 1;
+    }
+}
 
 @media (max-width: 700px) {
-    .section2{
-        width: 100%;
-        height: 420px;
-        display: flex;
-        flex-direction: column;
-        padding-top: 0.5rem;
-    }
-    .posts{
-        background-color: grey;
-        width: 100%;
-        height: 400px;
-        margin-bottom: 0.5rem;
-        margin-right: 0rem;
-    }
-    .sidebar{
-        background-color: grey;
-        width: 100%;
-        height: 400px;
-    }
     .menu a{
         margin-right: 0rem;
     }
@@ -149,9 +200,30 @@ footer{
     }
     .section img{
         margin-right: 1rem;
+    } 
+    .newpost h3{
+        font-size: 1rem;
     }
-
+    .section2{
+        display: flex;
+        flex-flow: column;
+    }
+    .section2{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .posts{
+        width: 100%;
+    }
+    .posts div{
+        width: 100%;
+    }
 }
+
+
 @media (max-width: 320px){
     .section{
         display: flex;
