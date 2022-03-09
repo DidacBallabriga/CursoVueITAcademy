@@ -1,0 +1,336 @@
+
+/*Cambio el orden de las secciones 1 y 2 con GRID*/
+body{
+    padding: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "section2"
+    "footer"
+    "section1"
+    ;
+}
+/*Vuelvo al orden original con GRID*/
+@media (max-width: 700px) {
+    body{
+        padding: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "section1"
+        "section2"
+        "footer";
+    }
+    
+}
+/*De nuevo altero el orden con GRID*/
+@media (max-width: 320px){
+    body{
+        padding: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "section2"
+        "section1"
+        "footer";
+    }
+}
+
+header{
+    grid-area: header;
+}
+.section1{
+    grid-area: section1;
+}
+.section2{
+    grid-area: section2;
+}
+footer{
+    grid-area: footer;
+}
+.section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+}
+.menu {
+    display: block;
+    animation: down  1s ease-in;
+}
+.menu a{
+    display: inline-block;
+    margin-right: 5rem;
+    text-decoration: none;
+    color: grey;
+}
+.menu a i{
+    padding-right: 0.5rem;
+}
+
+.menu a i:hover{
+    color: rgba(238, 117, 101, 1);
+    transition: 0.3s;
+}
+.menu a:hover{
+    color: rgba(238, 117, 101, 1);
+    transition: 0.3s;
+}
+.logo{
+    animation: right 1s linear;
+}
+
+.rrss {
+    color: grey;
+    padding: 0;
+    animation: left  1s ease-in;
+}
+.facebook{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+.twitter{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+.facebook:hover{
+    color: blue;
+    transition: 0.3s;
+}
+.twitter:hover{
+    color: skyblue;
+    transition: 0.3s;
+}
+.section1{
+    position: relative;
+    text-align: center;
+}
+.header-text{
+    display: inline-block;
+    width: 90%;
+    height: 8.5rem;
+    background: rgba(124, 124, 124, 0.1);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.header-text h2{
+    color: rgba(238, 117, 101, 0.8);
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    animation: transparencyUp 2s ease-in;
+}
+.section1 img{
+    width: 100%;
+    height: 25rem;
+    object-fit: none;
+    margin: -4px;
+}
+.section2{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.posts{
+   width: 75%;
+   background-color: rgb(211, 209, 209);
+   margin-right: 1%;
+   padding-top: 0.5rem;
+   display: flex;
+   flex-flow: row wrap;
+   align-content: center;
+   justify-content: space-evenly;
+}
+.posts div{
+    width: 46%;
+    border: 0.5rem solid #f5f1f1;
+ }
+ .newpost{
+     background-color: #f5f1f1;
+     margin-bottom: 0.5rem;
+ }
+ .newpost img{
+     width: 100%;
+     height: 12rem;
+     opacity: 1;
+     object-fit: cover;
+ }
+
+ .newpost p{
+     columns: 2;
+ }
+ .date{
+    color: rgb(216, 184, 5, 0.9);
+    margin-top: -1.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+ }
+
+ .newpost h3{
+     background-color: #f08080;
+     text-transform: uppercase;
+     font-size: 1.5rem;
+     font-weight: lighter;
+     color: white;
+     padding-top: 3%;
+     padding-left: 0.5rem;
+     margin-block-start: 0em;
+     margin-block-end: 0em;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+ }
+ .read-more{
+     color: grey;
+     cursor: pointer;
+ }
+ .read-more:hover{
+    color: #f08080;
+    cursor: pointer;
+}
+.sidebar{
+    width: 24%;
+    background-color: rgb(211, 209, 209);
+    text-align: center;
+}
+.sidebar h4{
+   padding-top: 1rem;
+}
+.sidebar p{
+   padding: 0rem 1rem 1rem;
+}
+.prefooter{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+footer{
+    background-color: #f5f1f1;
+    border-left: 0.5rem solid rgb(211, 209, 209);
+    border-right: 0.5rem solid rgb(211, 209, 209);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 850px) {
+    .date{
+        font-size: 0.75rem;
+    }
+    .newpost p{
+        columns: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu a{
+        margin-right: 0rem;
+    }
+    .rrss {
+        color: grey;
+        padding: 0;
+    }
+    .facebook{
+        margin-left: 1rem;
+    }
+    .twitter{
+        margin-left: 1rem;
+    }
+    .section img{
+        margin-right: 1rem;
+    } 
+    .newpost h3{
+        font-size: 1rem;
+    }
+    .section2{
+        display: flex;
+        flex-flow: column;
+    }
+    .section2{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .posts{
+        width: 100%;
+    }
+    .posts div{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 320px){
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@keyframes down{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes left{
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes right{
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes transparencyUp{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+
+
